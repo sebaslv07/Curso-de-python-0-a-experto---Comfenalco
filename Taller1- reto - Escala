@@ -1,0 +1,21 @@
+while True:
+    numero = int(input("Ingrese un número entero para la escala de multiplicación: "))
+
+    resultado = numero  
+    print("Escala de multiplicación ascendente:")
+    for i in range(2, 11):
+        resultado *= i  
+        print(f"{resultado} x {i} = {resultado}")
+
+    resultado = numero  
+    print("Escala de multiplicación descendente:")
+    for i in range(9, 0, -1):
+        resultado *= i  
+        print(f"{resultado} x {i} = {resultado}")
+
+    continuar = input("¿Desea continuar con el programa? (s/n): ").lower()
+    if continuar != 's':
+        confirmacion = input("¿Enserio desea salir del programa? (s/n): ").lower()
+        if confirmacion == 's':
+            print("Adios..... Gracias.....")
+            break
